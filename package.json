@@ -1,0 +1,23 @@
+{
+  "name": "working-with-the-mind-private",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YASHIKA791/Working-With-The-Mind-Private.git"
+  },
+  "author": "yashika",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YASHIKA791/Working-With-The-Mind-Private/issues"
+  },
+  "homepage": "https://github.com/YASHIKA791/Working-With-The-Mind-Private#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
