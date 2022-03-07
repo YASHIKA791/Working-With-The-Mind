@@ -2,14 +2,14 @@ const express = require("express");
 
 const server = express();
 
-
+server.use(express.static('public'))
 
 
 // ================================================
 
 
-server.get("/login", function (req, res) {
-    res.render('/login');
+server.get("/sign-in", function (req, res) {
+    res.sendFile(__dirname+'/signin.html');
 })
 
 server.get("/sign-up", function (req, res) {
