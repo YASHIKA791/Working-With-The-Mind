@@ -21,7 +21,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const auth = getAuth();
-login.addEventListener('click',(e)=>{
+signin.addEventListener('click',(e)=>{
 var email = document.getElementById('email').value;
 var password = document.getElementById('password').value;
 
@@ -38,38 +38,7 @@ var password = document.getElementById('password').value;
      alert('User loged in!');
     // window.location.href ="/" ;
     // ...
-    async function registerUser() {
-        // event.preventDefault();
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        // const username = document.getElementById("name").value;
-        var details = {
-            'email': email,
-            'password': password,
-        };
-
-        var formBody = [];
-        for (var property in details) {
-          var encodedKey = encodeURIComponent(property);
-          var encodedValue = encodeURIComponent(details[property]);
-          formBody.push(encodedKey + "=" + encodedValue);
-        }
-        formBody = formBody.join("&");
-
-        const option = {
-          method: "POST",
-          headers: {
-            "Content-Type": 'application/x-www-form-urlencoded;charset=UTF-8',
-          },
-          body: formBody
-        }
-
-
-        let fetchData = await fetch("/api/login", option).then((res) => res.json());
-        console.log(fetchData);
-      }
-      registerUser();
-      window.location.href='/dashboard';
+    
   })
   .catch((error) => {
     const errorCode = error.code;
