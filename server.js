@@ -28,26 +28,25 @@ server.get("/sign-in",function(req,res)
 {
   res.render("signin");
 })
-server.get("sign-up",function(req,res) {
+server.get("sign-up",function(req,res){
   res.render("sign-up");
 })
-server.get("/about", function(req, res) {
+server.get("/about", function(req, res){
   res.render("about", {aboutContent: aboutContent});
 });
 
-server.get("/contact", function(req, res) {
+server.get("/contact", function(req, res){
   res.render("contact", {contactContent: contactContent});
 });
 
-server.get("/compose", function(req, res) {
+server.get("/compose", function(req, res){
   res.render("compose");
 });
 
 server.post("/compose", function(req, res){
   const post = {
     title: req.body.postTitle,
-    content: req.body.postBody,
-    author: req.body.postAuthor
+    content: req.body.postBody
   };
 
   posts.push(post);
@@ -65,8 +64,7 @@ server.get("/posts/:postName", function(req, res){
     if (storedTitle === requestedTitle) {
       res.render("post", {
         title: post.title,
-        content: post.content,
-        author: post.author
+        content: post.content
       });
     }
   });
