@@ -3,11 +3,13 @@
     <h1>Create your own Blog</h1>
     <form class="" action="/compose" method="post">
       <div class="form-group">
-        <label>Title and Author</label>
-        <input class="form-control" type="text" name="postTitle">
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle" required>
+        <label>Author</label>
+        <input class="form-control" type="text" name="postAuthor" required>
         
         <label>Post</label>
-        <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+        <textarea class="form-control" name="postBody" rows="5" cols="30" required></textarea>
       </div>
       <button class="btn btn-primary" type="submit" name="button">Publish</button>
     </form>

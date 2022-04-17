@@ -13,19 +13,23 @@ const homeStartingContent ="Depression is a serious mental health condition whic
 const aboutContent = "The examination process at student life has an inverse association with mental wellbeing and academic performance. Examinations are considered events of dread for most students in Bangladesh, at all levels including the undergraduate level. One of the contributory factors could be the rank based academic competition among peers enforced by the system. It is expected to be associated with several socioeconomic factors, such as social dogma of establishment, lack of permanent jobs, delay in certification, and excessive competition in entry-level positions. Considering Bangladesh is a low-middle income country, youths often are faced with the stress of creating an identity and generating income at an early age. It forces them to take examinations seriously which would determine the progression of their career. This is where, we postulate, mental health of students are affected emotionally, psychologically and socially due to this pressure. According to Dasgupta (2013), there are two important segments of mental health: psychological, where mental health develops due to the pressure of expectation and adjustment to the environment to survive, and social, where biology, psychology, and society all affect individual mental health. Societal norms influence the adaptive or maladaptive behavior of the individual. Mental health problems are public health concerns that often ignite risky behaviors among youths, such as suicide among university students or resorting to addictive substances. However, there remains a literature gap in Bangladesh on this issue. This paper intends to contribute to it by investigating the prevalence of anxiety and depression originating from examination pressure. The data of this study would be collected from students of Dhaka University English Department who had undergone the undergraduate examinations with the objective of identifying possible predictors related to student's socio-demographic and academic status. Qualitative methodologies would be used to analyze the data, which includes lexical diversity, text-preprocessing, constructing a corpus, and token objects. Possible quantitative analysis, such as mixed effects models, would be used for the categorized anxiety scores and fitting to demographic information to measure the correlation between exam anxiety and depression severity status among students..";
 const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
 
+// mongoose.connect("mongodb+srv://yashika:Yas@2001@cluster0.ucbsh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/blogDB", {useNewUrlParser: true});
 mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true});
-
 const postSchema = new mongoose.Schema({
   title: String,
   content: String,
+  author:String
  
 });
 // =================== =============================
 
 
 const Post = mongoose.model("Post", postSchema);
+server.get("/",function(req,res){
+  res.render("signin");
+});
 
-server.get("/", function(req, res){
+server.get("/home", function(req, res){
 
   Post.find({}, function(err, posts){
     res.render("home", {
@@ -49,6 +53,7 @@ server.post("/compose", function(req, res){
   const post = new Post({
     title: req.body.postTitle,
     content: req.body.postBody,
+    author:req.body.postAuthor
     
   });
 
@@ -68,6 +73,7 @@ const requestedPostId = req.params.postId;
     res.render("post", {
       title: post.title,
       content: post.content,
+      author:post.author
       
     });
   });

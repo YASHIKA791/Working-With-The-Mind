@@ -36,7 +36,7 @@ var password = document.getElementById('password').value;
     })
 
      alert('User loged in!');
-    // window.location.href ="/" ;
+    window.location.href ="/" ;
     // ...
     
   })

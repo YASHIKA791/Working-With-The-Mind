@@ -44,7 +44,7 @@ signup.addEventListener("click", (e) => {
                 email: email,
             });
 
-            alert("user created!");
+            alert("user created! Please click on SignIn button");
 
             
 
