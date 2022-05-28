@@ -13,6 +13,7 @@
 
 	</head>
 	<body>
+		
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -37,18 +38,18 @@
 									</p>
 								</div> -->
 			      	</div>
-					  <div>
-							<div action="#" class="signin-form">
+					  
+							<form action="/signin" method="POST" class="signin-form">
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Email Address</label>
-			      			<input type="email" id="email" class="form-control" placeholder="Email" required>
+			      			<input type="email" id="email" class="form-control" placeholder="Email" name="username" required>
 			      		</div>
 		            <div class="form-group mb-3">
 		            	<label class="label" for="password">Password</label>
-		              <input type="password" id="password" class="form-control" placeholder="Password" required>
+		              <input type="password" id="password" class="form-control" placeholder="Password" name="password"required>
 		            </div>
 		            <div class="form-group">
-		            	<button type="button" id="signin" class="form-control btn btn-primary submit px-3">Sign In</button>
+		            	<button type="submit" id="signin" class="form-control btn btn-primary submit px-3">Sign In</button>
 		            </div>
 		            <div class="form-group d-md-flex">
 		            	<div class="w-50 text-left">
@@ -58,23 +59,24 @@
 										</label>
 									</div>
 									<div class="w-50 text-md-right">
-										<a href="#" id="forgotPass">Forgot Password</a>
+										<a href="/reset" id="forgotPass">Forgot Password</a>
 									</div>
-		            </div>
-				</div>
+								</div>
+								</form>
+				
 				</div>
 		        </div>
 		      </div>
 				</div>
 			</div>
-		</div>
+		
 	</section>
 
 	<script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
-  <script type="module" src="js/signinAuth.js"></script>
+ 
 
 	</body>
 </html>
