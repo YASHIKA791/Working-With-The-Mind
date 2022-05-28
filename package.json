@@ -7,5 +7,26 @@
     "lodash": "^4.17.21",
     "md5": "^2.3.0",
     "mongoose": "^6.2.10"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "working-with-the-mind-private",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YASHIKA791/Working-With-The-Mind-Private.git"
+  },
+  "author": "yashika",
+  "license": "ISC",
+  "engines": {
+    "node": "v16.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/YASHIKA791/Working-With-The-Mind-Private/issues"
+  },
+  "homepage": "https://github.com/YASHIKA791/Working-With-The-Mind-Private#readme",
+  "description": ""
 }
