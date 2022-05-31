@@ -34,7 +34,7 @@ Click this<a href="https://afternoon-wildwood-98963.herokuapp.com/" > link </a>t
 ## Tech Stack
 
 - Front-End : 
-HTML, CSS,EJS
+ CSS,EJS
 - Back-End : 
 NODEJS,MongoDB
 - Other tools and platforms : <br>
