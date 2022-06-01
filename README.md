@@ -39,6 +39,7 @@ Click this<a href="https://afternoon-wildwood-98963.herokuapp.com/" > link </a>t
 NODEJS,MongoDB
 - Other tools and platforms : <br>
 i) Used Heroku for CI/CD deployment <br>
+ii)Used Atlas for delployment of database <br>
 
  
 
